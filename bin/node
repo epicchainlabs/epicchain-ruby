@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require 'bundler/setup'
+require 'neo'
+
+Neo.configure { |c| c.network = ENV['NEO_NET'] || 'TestNet' }
+
+Neo::Node.start
+
+# require 'irb'
+# IRB.start(__FILE__)
